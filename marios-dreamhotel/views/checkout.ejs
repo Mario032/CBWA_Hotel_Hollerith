@@ -1,0 +1,110 @@
+<!-- Version 1.7 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script>
+        function showNotification() {
+            alert('Ihre Buchung wird von uns bearbeitet');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Überblick</a></li>
+                <li><a href="/rooms">Unterkunft</a></li>
+                <li><a href="/restaurant">Restaurant</a></li>
+                <li><a href="/well-being">Wellness</a></li>
+                <li><a href="/gallery">Gallerie</a></li>
+                <li><a href="/exclusive-offers">Exklusive Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Checkout Page</h1>
+        <h2>Ihre Buchungen</h2>
+        <ul>
+            <% bookings.forEach(function(booking) { %>
+                <li><%= booking.type %>: <%= booking.description %></li>
+            <% }); %>
+        </ul>
+        <form action="/delete-bookings" method="POST">
+            <button type="submit" class="delete-button">Bestellung löschen</button>
+        </form>
+
+        <h2>Persönliche Angaben</h2>
+        <form action="/personal-details" method="POST" onsubmit="showNotification()"></form>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="firstName" required><br>
+            <label for="last-name">Name:</label>
+            <input type="text" id="last-name" name="lastName" required><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+            <label for="iban">IBAN:</label>
+            <input type="text" id="iban" name="iban" required><br>
+            <button type="submit" class="book-button" onclick="showNotification()">Buchen auf Rechnung</button>
+        </form>
+        
+        <h2>Zusätzliche Räume hinzufügen</h2>
+        <ul>
+            <li>
+                Komfort und Bequemlichkeit: Standardzimmer für zwei Personen
+                <form action="/book" method="POST">
+                    <input type="hidden" name="type" value="Raum">
+                    <input type="hidden" name="description" value="Standardzimmer für zwei Personen">
+                    <button type="submit" class="book-button">Raum buchen</button>
+                </form>
+            </li>
+            <li>
+                Familiensuite für 4-6 Personen
+                <form action="/book" method="POST">
+                    <input type="hidden" name="type" value="Raum">
+                    <input type="hidden" name="description" value="Familiensuite für 4-6 Personen">
+                    <button type="submit" class="book-button">Raum buchen</button>
+                </form>
+            </li>
+            <li>
+                Präsidentensuite für 4 Personen
+                <form action="/book" method="POST">
+                    <input type="hidden" name="type" value="Raum">
+                    <input type="hidden" name="description" value="Präsidentensuite für 4 Personen">
+                    <button type="submit" class="book-button">Raum buchen</button>
+                </form>
+            </li>
+        </ul>
+        <h2>Zusätzliche Events hinzufügen</h2>
+        <ul>
+            <li>
+                Privater Tauchkurs
+                <form action="/book" method="POST">
+                    <input type="hidden" name="type" value="Event">
+                    <input type="hidden" name="description" value="Privater Tauchkurs">
+                    <button type="submit" class="book-button">Event buchen</button>
+                </form>
+            </li>
+            <li>
+                Exklusive Yachtkreuzfahrt
+                <form action="/book" method="POST">
+                    <input type="hidden" name="type" value="Event">
+                    <input type="hidden" name="description" value="Exklusive Kreuzfahrt">
+                    <button type="submit" class="book-button">Event buchen</button>
+                </form>
+            </li>
+            <li>
+                Golfturnier
+                <form action="/book" method="POST">
+                    <input type="hidden" name="type" value="Event">
+                    <input type="hidden" name="description" value="Golfturnier">
+                    <button type="submit" class="book-button">Event buchen</button>
+                </form>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

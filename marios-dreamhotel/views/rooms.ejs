@@ -1,0 +1,75 @@
+<!-- Version 1.4 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Überblick</a></li>
+                <li><a href="/rooms">Unterkunft</a></li>
+                <li><a href="/restaurant">Restaurant</a></li>
+                <li><a href="/well-being">Wellness</a></li>
+                <li><a href="/gallery">Gallerie</a></li>
+                <li><a href="/exclusive-offers">Exklusive Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Komfortable Unterkünfte: Entdecken Sie unsere Zimmer</h1>
+            <p>Erleben Sie erstklassigen Komfort in unseren stilvoll eingerichteten Zimmern. Jede Unterkunft bietet modernste Annehmlichkeiten, eine einladende Atmosphäre und sorgt für einen erholsamen Aufenthalt. Wählen Sie aus einer Vielzahl von Zimmertypen, die perfekt auf Ihre Bedürfnisse abgestimmt sind.</p>
+
+            <div class="image-container">
+                <img src="Hotel_images/Room_Images/room_standard.jpeg" alt="Room View">
+            </div>
+        </section>
+        <section>
+            <h2>Komfort und Bequemlichkeit: Standardzimmer für zwei Personen</h2>
+            <p>Erleben Sie Entspannung und Funktionalität in unserem Standardzimmer, das für zwei Personen ausgelegt ist. Genießen Sie moderne Annehmlichkeiten, eine gemütliche Einrichtung und eine einladende Atmosphäre, die einen erholsamen Aufenthalt garantiert. Ideal für Paare oder Alleinreisende, die Komfort und Bequemlichkeit suchen.</p>
+            <div class="image-container">
+                <img src="Hotel_images/Room_Images/room_standard.jpeg" alt="Standard Room">
+            </div>
+            <form action="/book" method="POST">
+                <input type="hidden" name="type" value="Raum">
+                <input type="hidden" name="description" value="Standardzimmer für zwei Personen">
+                <button type="submit" class="booking-button">Raum buchen</button>
+            </form>
+        </section>
+            </div>
+        </section>
+        <section>
+            <h2>Familiensuite für 4-6 Personen: Entspannung und Komfort für die ganze Familie</h2>
+            <p>Genießen Sie gemeinsame Zeit in unserer geräumigen Familiensuite für 4-6 Personen. Die Suite bietet modernen Komfort, stilvolle Einrichtung und ausreichend Platz für alle Familienmitglieder. Perfekt geeignet für einen entspannten Aufenthalt mit Ihrer Familie.</p>
+            <div class="image-container">
+                <img src="<%= imagePlaceholder %>" alt="Family Suite">
+            </div>
+            <form action="/book" method="POST">
+                <input type="hidden" name="type" value="Raum">
+                <input type="hidden" name="description" value="Familiensuite für 4-6 Personen">
+                <button type="submit" class="booking-button">Raum buchen</button>
+            </form>
+        </section>
+        </section>
+        <section>
+            <h2>Präsidentensuite für 4 Personen: Luxus und Eleganz vereint</h2>
+            <p>Erleben Sie unvergleichlichen Luxus in unserer Präsidentensuite für 4 Personen. Diese exklusive Suite bietet großzügigen Raum, exquisite Einrichtung und erstklassigen Komfort. Genießen Sie einen unvergesslichen Aufenthalt mit herausragendem Service im Hotel Hollerith."</p>
+            <div class="image-container">
+                <img src="<%= imagePlaceholder %>" alt="Presidental Suite">
+            </div>
+            <form action="/book" method="POST">
+                <input type="hidden" name="type" value="Raum">
+                <input type="hidden" name="description" value="Präsidentensuite für 4 Personen">
+                <button type="submit" class="booking-button">Raum buchen</button>
+            </form>
+        </section>
+        </section>
+    </main>
+</body>
+</html>

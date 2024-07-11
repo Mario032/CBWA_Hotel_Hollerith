@@ -1,0 +1,52 @@
+<!-- Version 1.1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Overview</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Überblick</a></li>
+                <li><a href="/rooms">Unterkunft</a></li>
+                <li><a href="/restaurant">Restaurant</a></li>
+                <li><a href="/well-being">Wellness</a></li>
+                <li><a href="/gallery">Gallerie</a></li>
+                <li><a href="/exclusive-offers">Exklusive Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="image-container">
+            <img src="<%= imageUrl %>" alt="Hotel Overview">
+        </div>
+        <h1>Wilkommen im Hotel Hollerith</h1>
+        <p>Hier finden Sie die besten Zimmer und exklusive Events.</p>
+
+
+        <% if (stuttgartWeather && lasPalmasWeather) { %>
+            <section>
+                <h2>Wetterinformationen</h2>
+                <div class="weather">
+                    <h3>Dein Standort</h3>
+                    <p>Temperatur: <%= stuttgartWeather.temperature %>°C</p>
+                    <p>Windgeschwindigkeit: <%= stuttgartWeather.windspeed %> km/h</p>
+                </div>
+                <div class="weather">
+                    <h3>Dein Urlaubsziel</h3>
+                    <p>Temperatur: <%= lasPalmasWeather.temperature %>°C</p>
+                    <p>Windgeschwindigkeit: <%= lasPalmasWeather.windspeed %> km/h</p>
+                </div>
+            </section>
+            <% } else { %>
+            <p>Wetterinformationen konnten nicht abgerufen werden.</p>
+            <% } %>
+
+    </main>
+</body>
+</html>

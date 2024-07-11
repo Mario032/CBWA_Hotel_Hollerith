@@ -1,0 +1,70 @@
+<!-- Version 1.5 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Events</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Überblick</a></li>
+                <li><a href="/rooms">Unterkunft</a></li>
+                <li><a href="/restaurant">Restaurant</a></li>
+                <li><a href="/well-being">Wellness</a></li>
+                <li><a href="/gallery">Gallerie</a></li>
+                <li><a href="/exclusive-offers">Exklusive Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Exklusive Events: Unvergessliche Erlebnisse</h1>
+            <p>Entdecken Sie eine Welt einzigartiger Veranstaltungen und Erlebnisse in unserem Hotel. Unsere exklusiven Events bieten unvergessliche Momente und erstklassigen Service. Erleben Sie Luxus und Eleganz bei jeder Veranstaltung.</p>
+            <div class="image-container">
+                <img src="<%= imagePlaceholder %>" alt="Exlusive Events">
+            </div>
+        </section>
+        <section>
+            <h2>Private Tauchkurse: Tauchen Sie ein in ein exklusives Abenteuer</h2>
+            <p>Erleben Sie die faszinierende Unterwasserwelt mit unseren privaten Tauchkursen. Unter der Anleitung erfahrener Tauchlehrer entdecken Sie die Schönheit des Meeres in einem exklusiven und persönlichen Rahmen. Perfekt für Anfänger und Fortgeschrittene, die ein unvergessliches Taucherlebnis suchen, im Hotel Hollerith.</p>
+            <div class="image-container">
+                <img src="<%= imagePlaceholder %>" alt="Private Diving Classes">
+            </div>
+            <form action="/book" method="POST">
+                <input type="hidden" name="type" value="Event">
+                <input type="hidden" name="description" value="Privater Tauchkurs">
+                <button type="submit" class="booking-button">Event buchen</button>
+            </form>
+        </section>
+        <section>
+            <h2>Exklusive Yachtkreuzfahrten: Luxus auf hoher See</h2>
+            <p>Genießen Sie unvergessliche Momente auf unseren exklusiven Yachtkreuzfahrten. Erleben Sie den Luxus und die Schönheit der Meere in privater Atmosphäre, während Sie entlang atemberaubender Küsten und malerischer Landschaften segeln. Perfekt für besondere Anlässe oder einfach, um sich stilvoll zu entspannen.</p>
+            <div class="image-container">
+                <img src="<%= imagePlaceholder %>" alt="Exclusive Yacht Cruises">
+            </div>
+            <form action="/book" method="POST">
+                <input type="hidden" name="type" value="Event">
+                <input type="hidden" name="description" value="Exklusive Yachtkreuzfahrt">
+                <button type="submit" class="booking-button">Event buchen</button>
+            </form>
+        </section>
+        <section>
+            <h2>Golfturnier: Spitzenleistung auf dem Grün</h2>
+            <p>Treten Sie an bei unserem exklusiven Golfturnier und erleben Sie erstklassiges Golfspiel in einer luxuriösen Umgebung. Messen Sie sich mit anderen Enthusiasten und genießen Sie die erstklassigen Einrichtungen unseres Hotels. Perfekt für Golfliebhaber, die ihr Können unter Beweis stellen und unvergessliche Momente auf dem Grün erleben möchten.</p>
+            <div class="image-container">
+                <img src="<%= imagePlaceholder %>" alt="Golf Tournament">
+            </div>
+            <form action="/book" method="POST">
+                <input type="hidden" name="type" value="Event">
+                <input type="hidden" name="description" value="Golfturnier">
+                <button type="submit" class="booking-button">Event buchen</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
